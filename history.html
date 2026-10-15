@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<!-- history.html — Kadena Community Edition. Content copy is curated & date-verified against the KDACE historical archive; propose factual changes via the archive, style changes via this repo's PR flow. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | Kadena Community Edition | The Chain That Outlived Its Company</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <meta name="description" content="From JPMorgan's blockchain program to a community-run proof-of-work network: the full history of Kadena, Chainweb and Pact — every claim traceable to a public source.">
+    <meta name="keywords" content="Kadena, KDA, Kadena blockchain, Chainweb, Pact programming language, Web3 crypto, decentralized PoW, Kadena Community Edition, blockchain history">
+    <meta name="author" content="Kadena Community">
+    <link rel="canonical" href="https://kda-chain.org/history.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kda-chain.org/history.html">
+    <meta property="og:title" content="History | Kadena Community Edition | The Chain That Outlived Its Company">
+    <meta property="og:description" content="From JPMorgan's blockchain program to a community-run proof-of-work network: the full history of Kadena, Chainweb and Pact — every claim traceable to a public source.">
+    <meta property="og:image" content="https://kda-community.github.io/img/og_card/og_history.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kda-community.github.io/history.html">
+    <meta property="twitter:title" content="History | Kadena Community Edition | The Chain That Outlived Its Company">
+    <meta property="twitter:description" content="From JPMorgan's blockchain program to a community-run proof-of-work network: the full history of Kadena, Chainweb and Pact — every claim traceable to a public source.">
+    <meta property="twitter:image" content="https://kda-community.github.io/img/og_card/og_history.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://kda-chain.org/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "History",
+        "item": "https://kda-chain.org/history.html"
+      }]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#63e038', /* Green */
+                            hover: '#4ecf25',
+                        },
+                        dao: {
+                            DEFAULT: '#f7931a', /* Orange */
+                            hover: '#e0820b',
+                        },
+                        dev: {
+                            DEFAULT: '#3498db', /* Blue */
+                            hover: '#2980b9',
+                        },
+                        surface: {
+                            light: '#FAFAFA',
+                            dark: '#050505',
+                            card: '#121212',
+                            border: '#27272a'
+                        },
+                        text: {
+                            mainLight: '#1e1f23',
+                            mainDark: '#f5f5f5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Utility for aspect ratios */
+        .aspect-video {
+            aspect-ratio: 16 / 9;
+        }
+
+        .hist-prose h2 { scroll-margin-top: 6rem; }
+    </style>
+</head>
+
+<body
+    class="bg-surface-light dark:bg-surface-dark text-text-mainLight dark:text-text-mainDark font-sans antialiased selection:bg-brand selection:text-black overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav
+        class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-surface-border bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+
+            <a href="/" class="flex items-center">
+                <img src="img/kadenace_dark.svg" class="h-9 md:h-12 w-auto block dark:hidden" alt="Kadena">
+                <img src="img/kadenace_light.svg" class="h-9 md:h-12 w-auto hidden dark:block" alt="Kadena">
+            </a>
+
+            <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
+                <button id="theme-toggle" type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z"
+                            fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <button id="menu-toggle" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
+
+                    <li>
+                        <a href="miners.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a>
+                    </li>
+
+                    <li>
+                        <a href="developers.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dev dark:text-white dark:hover:bg-gray-700 dark:hover:text-dev">Developers</a>
+                    </li>
+
+                    <li>
+                        <a href="dao.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a>
+                    </li>
+
+                    <li>
+                        <a href="ecosystem.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
+                    </li>
+
+                    <li>
+                        <a href="wallets.html"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
+                    </li>
+
+                    <li>
+                        <a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="pt-32 pb-8 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="font-mono text-xs uppercase tracking-widest text-brand mb-3">History · KDA Community Edition</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">The Chain That <span class="text-brand">Outlived</span> Its Company</h1>
+            <p class="text-gray-600 dark:text-gray-400">A history of Kadena — from a bank's research program to a community-run public blockchain. Every date on this page traces to a public, archived artifact.</p>
+        </div>
+    </section>
+
+    <article class="flex-grow px-4 pb-16">
+        <div class="max-w-3xl mx-auto space-y-14 hist-prose">
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">Prologue</h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p>Blockchains are usually judged by the companies that launch them. Kadena broke the rule. In October 2025 the company behind it walked away — and the network didn't blink. The blocks kept coming. A year later, an entirely volunteer community has shipped a hard fork, a protocol release, a quantum-resistant roadmap, and a working DAO, all while the original founders' company sits as a static tombstone.</p><p>This is the story of what was built, what was abandoned, and what was saved.</p></div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">I · It came from the bank <span class='text-brand'>· 2016–2018</span></h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p>Kadena didn't start with whitepapers and hype. It started inside JPMorgan. In June 2016, <strong>Stuart Popejoy</strong> — the executive who had led the bank's <em>Juno</em> blockchain program — and <strong>Will Martino</strong> left to build what they believed public blockchains could actually be.</p><p>The idea was heretical for its day: <strong>make proof-of-work scale without giving up Bitcoin-grade security.</strong> The answer was <strong>Chainweb</strong> — dozens of parallel proof-of-work chains, each mining, each verifying the others, braided into one network whose combined security grows every time you add a chain.</p><p>Funding followed belief: $2.25M in January 2018, then $12M that April from Multicoin, SV Angel, Susquehanna and others.</p></div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">II · The engine too good to abandon <span class='text-brand'>· 2019–2022</span></h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p>On a Monday in early November 2019, Chainweb went live. The genesis block is timestamped <span class='font-mono'>2019-10-30</span> — you can read it yourself, today, on any node.</p><p>The tech wasn't marketing; it was scholarship. A peer-reviewed <strong>IEEE paper (2019)</strong> carried the first formal academic description of Chainweb — co-authored by <strong>Stuart Haber</strong>, the cryptographer whose timestamping research is cited in the Bitcoin whitepaper itself. The U.S. Patent Office granted Kadena <strong>US 10,938,567</strong> for the parallel-chain architecture.</p><p>Even its smallest unit carries a wink at history: the atomic KDA denomination is a <strong>hop</strong> — one trillionth of a coin, named for Grace Hopper, the woman who invented the compiler.</p><p>And the smart-contract layer, <strong>Pact</strong>, was built to do the thing nobody else could: let you read what a contract guarantees, in plain language, before you sign it.</p></div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">III · The company leaves the room <span class='text-brand'>· 2023 – Oct 2025</span></h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p>Then the story turns quiet — too quiet. The company's engineering blog published its final post on <strong>28 December 2023</strong>, then fell silent for the next twenty-one months.</p><p>On <strong>21 October 2025</strong>, the announcement came — on X, not the blog: the organization was "no longer able to continue business operations" and was "ceasing all business activity and active maintenance of the Kadena blockchain immediately." The company's website became a one-line tombstone.</p><p>The market answered brutally. The token lost well over half its value within hours; Bybit, OKX and Binance.US began delisting the following week. More than a dozen outlets wrote the obituary: <em>RIP Kadena, another chain the company abandoned.</em></p><p>Except it wasn't dead. The announcement itself had said so, almost as an aside: <span class="font-mono text-sm">"The Kadena blockchain is not owned or operated by the company."</span> They were right. They just didn't know who else had read that line carefully.</p></div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">IV · We read it carefully <span class='text-brand'>· Nov 2025 →</span></h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p><strong>Eleven days</strong> after the company folded, the first community commit landed: a full fork-sweep of the lineage — Chainweb node, Pact, the tooling — onto GitHub. Then, on 8 November 2025, a hard fork: platform-emissions funds, frozen and placed under community control, so the chain's economic life-support would never again depend on a payroll.</p><p>The proof wasn't in our words; it was in <em>theirs</em>. CoinEx began supporting "the <strong>community-maintained version</strong> of the KDA network." Binance opened withdrawals on the "<strong>Kadena community-maintained chain</strong>." When the exchanges you're supposedly too dead to trade on start using <em>those exact words</em>, the story has flipped.</p><p>Guardianship of emissions went to a 3-of-5 multisig — and here's the part the obituary writers missed: several signers are the <strong>original Kadena-LLC tech leads of Chainweb and Pact</strong> who came back to protect their own life's work. We didn't inherit the engine. The people who built it never actually left. As the founding document put it: <em>the miners ultimately have the final say.</em></p></div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">V · The renaissance <span class='text-brand'>· 2026</span></h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p>Since then, in the open, by volunteers:</p><ul><li><strong>testnet06</strong> — a fresh chain, after the old testnet was abandoned;</li><li><strong>Chainweb Community 3.2</strong> — miner voting made live, node storage slashed from 400&nbsp;GB to under 50&nbsp;GB so your laptop can run a node;</li><li><strong>post-quantum research</strong> — SPHINCS+ signatures and <span class='font-mono'>q:/x:</span> accounts on active development branches;</li><li>and a <strong>transparency report</strong> where we admitted shipping 3.2 partially closed-source, then fixed it — because trust is built by showing your work, not by claiming perfection.</li></ul><p>And when forty-four million KDA faced a dumping wave, 53 ordinary investors pooled fifty-five thousand dollars — not millions, <em>thousands</em> — to buy 37M KDA and lock it away from the market. Not to profit. To protect.</p></div>
+            </section>
+            <section>
+                <h2 class="text-2xl font-extrabold mb-4">The point</h2>
+                <div class="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 [&_li]:ml-5 [&_li]:list-disc"><p>A company can fold. A ledger, secured by a community that chose to keep showing up, does not have to. Kadena was built on the idea that no single party should control the network — and when the ultimate test of that idea arrived, <strong>it held</strong>.</p><p>The engine was too beautiful to abandon. So we didn't.</p></div>
+            </section>
+        </div>
+    </article>
+
+    <section class="px-4 pb-24">
+        <div class="max-w-3xl mx-auto">
+            <details class="bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 rounded-2xl p-6">
+                <summary class="font-bold cursor-pointer hover:text-brand transition-colors">Sources & receipts — verify everything</summary>
+                <div class="mt-4 text-sm text-gray-600 dark:text-gray-400 space-y-2 leading-relaxed">
+                    <p>Key facts on this page, in order: JPMorgan departure — Quartz (July 2016). Funding rounds — CoinDesk (Jan + Apr 2018). IEEE Chainweb paper — arXiv:1904.12924 / DOI 10.1109/EuroSPW.2019.00049. Patent — USPTO 10,938,567 (assignee: Kadena LLC). Genesis timestamp — readable on any Chainweb node (<span class="font-mono">creationTime 2019-10-30T00:01:00Z</span>). Shutdown — the company's own X post of 2025-10-21 + kadena.io banner. Delistings — Binance.US/Bybit/OKX notices, late Oct 2025. Blog silence — medium.com/kadena-io feed. Fork + multisig — kda-community GitHub (first commit 2025-11-01T01:30:01Z) + the community's dated publications. Exchange wording — CoinEx + Binance support notices (Nov 2025). Rescue — community account with the locker address <span class="font-mono">k:…otc-deal-locker</span>.</p>
+                    <p>Maintained as a sourced archive by KDA Community Edition contributors. Corrections welcome — open an issue on <a href="https://github.com/kda-community" target="_blank" class="text-brand hover:underline external-link">GitHub</a>.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <div id="warning-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div id="modal-panel"
+                    class="relative transform overflow-hidden rounded-2xl bg-white dark:bg-surface-card border border-gray-200 dark:border-gray-800 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center mb-5">
+                            <div class="rounded-full bg-gray-100 dark:bg-gray-800 p-4">
+                                <img src="img/favicon.svg" alt="Kadena" class="h-10 w-10">
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">
+                                Leaving Website</h3>
+                            <div class="mt-3">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    You are about to visit an external third-party website. Are you sure you want to
+                                    proceed?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-[#0a0a0a] px-6 py-4 flex flex-row-reverse gap-3 sm:px-6">
+                        <button type="button" id="btn-proceed"
+                            class="inline-flex w-full justify-center rounded-lg bg-brand px-3 py-2 text-sm font-bold text-black shadow-sm hover:bg-brand-hover sm:w-auto transition-colors">Visit
+                            Site</button>
+                        <button type="button" id="btn-cancel"
+                            class="inline-flex w-full justify-center rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 sm:w-auto transition-colors">Go
+                            Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer
+        class="bg-white dark:bg-surface-card border-t border-gray-200 dark:border-gray-800 relative z-10 mt-auto transition-colors duration-300">
+        <div class="w-full max-w-7xl mx-auto py-8 px-4 flex flex-col items-center justify-center gap-6">
+
+            <div class="flex items-center space-x-6">
+
+                <a href="https://github.com/kda-community" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="GitHub">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                    </svg>
+                </a>
+
+                <a href="https://medium.com/@communitykadena" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Medium">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                    </svg>
+                </a>
+
+                <a href="https://x.com/KdaCed" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="X">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="https://t.me/+3JzP9i19cM8wOWQ8" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Telegram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 11.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                    </svg>
+                </a>
+
+                <a href="https://discord.gg/T4mASjRaRr" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Discord">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.077.077 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+                    </svg>
+                </a>
+
+                <a href="https://bsky.app/profile/kdacommunity.bsky.social" target="_blank"
+                    class="external-link text-gray-400 hover:text-brand transition-colors" aria-label="Bluesky">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565-.131 2.032-.234 3.024.338 4.089c.571 1.065 2.613 4.88 2.613 4.88l1.616 3.118s-3.018-.086-4.218 3.323c-.975 2.765 2.393 4.613 5.627 3.566 3.038-.984 5.293-3.659 6.024-4.88.73 1.221 2.986 3.896 6.024 4.88 3.234 1.047 6.602-.801 5.627-3.566-1.2-3.409-4.218-3.323-4.218-3.323l1.616-3.118s2.042-3.815 2.613-4.88c.572-1.065.469-2.057-.564-2.524-.66-.299-1.664-.621-4.3 1.24C16.046 4.748 13.087 8.686 12 10.8Z" />
+                    </svg>
+                </a>
+
+            </div>
+            <div class="text-center">
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"> © <span
+                        id="current-year"></span> <a href="#" class="hover:text-brand">Kadena Community Edition</a>. All
+                    Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- UNIVERSAL MODAL LOGIC ---
+        const modal = document.getElementById('warning-modal');
+        const btnProceed = document.getElementById('btn-proceed');
+        const btnCancel = document.getElementById('btn-cancel');
+        let targetUrl = '';
+
+        function openModal(url) {
+            targetUrl = url;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            targetUrl = '';
+        }
+
+        // Smart Event Delegation for ALL external links
+        document.body.addEventListener('click', (event) => {
+            const link = event.target.closest('a');
+            if (!link) return;
+            const isCardLink = link.closest('.project-card') || link.closest('.miner-card') || link.closest('.wallet-card') || link.closest('.group');
+            const isFooterLink = link.closest('footer');
+            const isExplicitExternal = link.classList.contains('external-link');
+            const isSetupButton = link.id === 'setup-guide-btn';
+
+            if ((isCardLink || isFooterLink || isExplicitExternal || isSetupButton) && !link.href.startsWith('javascript') && !link.href.includes('#')) {
+                const currentDomain = window.location.hostname;
+                const isDocsPath = link.pathname.startsWith('/docs/') || link.pathname === '/docs';
+                if ((link.hostname !== currentDomain && link.hostname !== '') || isDocsPath) {
+                    event.preventDefault();
+                    openModal(link.href);
+                }
+            }
+        });
+
+        btnProceed.addEventListener('click', () => {
+            if (targetUrl) {
+                window.open(targetUrl, '_blank');
+                closeModal();
+            }
+        });
+
+        btnCancel.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            const panel = document.getElementById('modal-panel');
+            if (!panel.contains(e.target)) {
+                closeModal();
+            }
+        });
+
+        // --- DARK MODE LOGIC ---
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+            document.documentElement.classList.remove('dark');
+        }
+        var themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function () {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+
+        // --- BURGER MENU ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarCta = document.getElementById('navbar-cta');
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navbarCta.classList.toggle('hidden');
+        });
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = navbarCta.contains(event.target);
+            const isClickOnButton = menuToggle.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnButton) {
+                navbarCta.classList.add('hidden');
+            }
+        });
+
+        // --- AUTOMATIC YEAR UPDATE ---
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
