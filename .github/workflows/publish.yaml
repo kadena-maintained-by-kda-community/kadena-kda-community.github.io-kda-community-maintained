@@ -107,7 +107,41 @@ jobs:
         cp -f sitemap.xml public/
         cp -f robots.txt public/
         cp -f .nojekyll public/
+        cp -f news.json public/
         
+    - name: Refresh news.json
+      run: |
+        curl -sS -m 30 -A 'Mozilla/5.0' 'https://medium.com/feed/@communitykadena' > /tmp/feed.xml || true
+        python3 - <<'PY' || true
+        import re, json, html
+        try:
+            raw = open('/tmp/feed.xml', encoding='utf-8', errors='replace').read()
+            items = []
+            for chunk in raw.split('<item>')[1:]:
+                def g(tag):
+                    m = re.search(rf'<{tag}>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</{tag}>', chunk, re.S)
+                    return html.unescape(m.group(1)).strip() if m else ''
+                title = g('title')
+                low = title.lower()
+                if not title or 'who we are' in low or 'road map' in low:
+                    continue
+                body = html.unescape(chunk[:6000])
+                img = re.search(r'<img[^>]+src="([^">]+)"', body)
+                items.append({
+                    'title': title,
+                    'link': g('link'),
+                    'date': g('pubDate'),
+                    'image': img.group(1) if img else 'https://placehold.co/600x400/121212/63e038?text=News',
+                })
+                if len(items) >= 4:
+                    break
+            if items:
+                json.dump(items, open('public/news.json', 'w', encoding='utf-8'), ensure_ascii=False)
+                print('news.json refreshed:', len(items))
+        except Exception as e:
+            print('news refresh skipped:', e)
+        PY
+
     - name: Install Robots.txt file
       run: | 
         echo "" >> public/robots.txt
