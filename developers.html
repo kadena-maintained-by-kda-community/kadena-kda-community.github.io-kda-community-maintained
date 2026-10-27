@@ -113,6 +113,8 @@
             </a>
 
             <div class="flex md:order-2 space-x-2 md:space-x-4 items-center">
+                <a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                    class="external-link hidden lg:inline-flex items-center px-3 py-2 rounded-lg text-gray-900 hover:bg-gray-200 hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand transition-colors">Explorer</a>
                 <button id="theme-toggle" type="button"
                     class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg text-sm p-2.5 transition-colors">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -125,7 +127,7 @@
                     </svg>
                 </button>
                 <button id="menu-toggle" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M1 1h15M1 7h15M1 13h15" />
@@ -133,29 +135,40 @@
                 </button>
             </div>
 
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-cta">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-surface-card md:dark:bg-transparent dark:border-gray-700 shadow-xl md:shadow-none relative z-50">
+                    class="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:items-center lg:space-x-4 lg:mt-0 lg:border-0 lg:bg-white dark:bg-surface-card lg:dark:bg-transparent dark:border-gray-700 shadow-xl lg:shadow-none relative z-50">
                     <li><a href="miners.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Miners</a>
-                    </li>
-
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand transition-colors">Miners</a></li>
                     <li><a href="developers.html"
-                            class="block py-2 px-3 md:p-0 text-white bg-dev rounded md:bg-transparent md:text-dev"
+                            class="block py-2 px-3 lg:p-0 text-white bg-dev rounded lg:bg-transparent lg:text-dev"
                             aria-current="page">Developers</a></li>
-
                     <li><a href="dao.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao">DAO</a>
-                    </li>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 hover:text-dao dark:text-white dark:hover:bg-gray-700 dark:hover:text-dao transition-colors">DAO</a></li>
                     <li><a href="ecosystem.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Ecosystem</a>
-                    </li>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand transition-colors">Ecosystem</a></li>
                     <li><a href="wallets.html"
-                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Wallets</a>
-                    </li>
-                    <li><a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
-                            class="external-link block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand">Explorer</a>
-                    </li>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-200 hover:text-brand dark:text-white dark:hover:bg-gray-700 dark:hover:text-brand transition-colors">Wallets</a></li>
+                    <li class="hidden lg:flex items-center gap-1 rounded-lg bg-gray-200 dark:bg-gray-800 p-1">
+                    <div><a href="how-to.html" class="block px-3 py-2 text-sm rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">Guides</a></div>
+                    <div class="relative group/menu">
+                        <button type="button" class="nav-group-btn flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">Story<svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></button>
+                        <div class="hidden group-hover/menu:block group-focus-within/menu:block absolute left-0 top-full pt-2 z-50">
+                            <div class="min-w-[180px] bg-white dark:bg-surface-card border border-gray-300 dark:border-gray-700 rounded-xl shadow-lg p-2 flex flex-col gap-1">
+                                <a href="history.html" class="block px-3 py-2 text-sm rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">History</a>
+                                <a href="timeline.html" class="block px-3 py-2 text-sm rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">Timeline</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                    <li class="lg:hidden"><details ><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors list-none [&::-webkit-details-marker]:hidden">Guides<svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary><div class="pl-3 mt-1 flex flex-col gap-1">
+                                <a href="how-to.html" class="block px-3 py-2 text-sm rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">How-to Guides</a>
+                                <a href="how-to-buy.html" class="block px-3 py-2 text-sm rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">How to Buy/Sell</a></div></details></li>
+                    <li class="lg:hidden"><details ><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors list-none [&::-webkit-details-marker]:hidden">Story<svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></summary><div class="pl-3 mt-1 flex flex-col gap-1">
+                                <a href="history.html" class="block px-3 py-2 text-sm rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">History</a>
+                                <a href="timeline.html" class="block px-3 py-2 text-sm rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">Timeline</a></div></details></li>
+                    <li class="lg:hidden"><a href="https://explorer.chainweb-community.org/mainnet" target="_blank"
+                            class="external-link block px-3 py-2 rounded-lg text-sm text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:text-brand dark:hover:text-brand transition-colors">Explorer</a></li>
                 </ul>
             </div>
         </div>
@@ -546,7 +559,7 @@
                             <h3 class="text-xl font-bold leading-6 text-gray-900 dark:text-white" id="modal-title">
                                 Leaving Website</h3>
                             <div class="mt-3">
-                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
                                     You are about to visit an external third-party website. Are you sure you want to
                                     proceed?
                                 </p>
@@ -603,7 +616,7 @@
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
                         </path>
                     </svg>
-                    <span class="text-gray-500 dark:text-gray-400 font-medium text-sm text-center px-4">Loading
+                    <span class="text-gray-600 dark:text-gray-400 font-medium text-sm text-center px-4">Loading
                         document...<br><span class="text-xs opacity-75 mt-1 block">(This may take a moment depending on
                             the file size)</span></span>
                 </div>
@@ -853,6 +866,15 @@
             if (!isClickInsideMenu && !isClickOnButton && !navbarCta.classList.contains('hidden')) {
                 navbarCta.classList.add('hidden');
             }
+        });
+
+        // NAV GROUP TOGGLE (touch/keyboard)
+        document.querySelectorAll('.nav-group-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var panel = btn.nextElementSibling;
+                panel.classList.toggle('hidden');
+                btn.setAttribute('aria-expanded', String(!panel.classList.contains('hidden')));
+            });
         });
 
         // AUTOMATIC YEAR UPDATE
